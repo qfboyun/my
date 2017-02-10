@@ -1,0 +1,22 @@
+先切换到root用户， sudo su root
+
+1、先设定一个root的密码， passwd root
+
+2、备份一下lightgdm
+
+cp -p /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.bak
+
+3、编辑lightdm.conf
+
+ gedit /etc/lightdm/lightdm.conf
+
+5、最后加：
+
+greeter-show-manual-login=true
+
+修改后为：
+
+[SeatDefaults]
+greeter-session=unity-greeter
+user-session=ubuntu
+greeter-show-manual-login=true
